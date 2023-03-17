@@ -8,17 +8,6 @@
   font-family: "Poppins", sans-serif;
   font-family: "Sono", sans-serif;
   background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
-  /* background: radial-gradient(759px at 14% 22.3%, rgb(10, 64, 88) 0%, rgb(15, 164, 102) 90%); */
-  /* background: linear-gradient(
-    109.6deg,
-    rgb(9, 154, 151) 11.2%,
-    rgb(21, 205, 168) 91.1%
-  ); */
-  /* background: linear-gradient(
-    90.9deg,
-    rgb(3, 195, 195) 0.3%,
-    rgb(37, 84, 112) 87.8%
-  ); */
 }
 .dropbtn {
   background-color: #04aa6d;
@@ -26,6 +15,7 @@
   padding: 16px;
   font-size: 16px;
   border: none;
+  cursor: pointer;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -157,9 +147,9 @@ h3 {
   margin-left: 40px;
   font-size: 45px;
 }
-img {
-  float: right;
+.midpic {
   margin-top: 180px;
+  float: right;
 }
 img {
   transition: 1s ease;
@@ -269,4 +259,35 @@ div .ab:hover {
 }
 .rev1 {
   list-style: none;
+}
+
+img .last {
+  margin-top: 20px;
+}
+.audio {
+  float: right;
+}
+.addMe {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04aa6d;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  color: #ffffff;
+}
+
+.credits {
+  font-size: 28px;
+  font-weight: 800px;
+}
+.cred {
+  list-style: none;
+  text-align: center;
+  font-size: 15px;
+}
+.gotop {
+  margin-top: 25px;
 }

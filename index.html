@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TeamYellow Python Game</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,9 @@
   <body>
     <div class="page">
     <div class="container">
+      
       <div id="dropdown" class="dropdown">
+        
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
           <a href="#aboutGame">About game</a>
@@ -27,6 +29,12 @@
           <a href="#credits">Credits</a>
         </div>  
         </div>
+        <div class="audio">
+        <audio id="myAudio" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        </audio>
+        <button class="addMe" onclick="toggleMute()">Add Music</button>
+      </div>
 <br>
      
       <br />
@@ -68,18 +76,18 @@
         </div>
       </div>
     <br>
-      <div class="ourGame">
+      <div class="ourGame" id="ourGame">
         <h3 class="game">Game</h3>
         <iframe
           src="https://replit.com/@MilaVetrenko/Yellow-Team-Game-project?embed=true"
-          width="1000"
+          width="1100"
           height="700"
         >
         </iframe>
       </div>
       <br />
 
-      <div class="dev">
+      <div class="dev" id="dev">
         <div class="row">
           <div class="column">
             <div class="gameDev" id="gameDev">
@@ -148,14 +156,14 @@
               </ul>
             </div>
           </div>
-          <img src="5.jpg" alt="pirate ship" width="800px" height="470px" />
+          <img class="midpic" src="5.jpg" alt="pirate ship" width="800px" height="470px" />
         </div>
       </div>
       <br />
       <div class="mid">
         <div class="row">
           <div class="column">
-            <div class="whatWell">
+            <div class="whatWell" id="whatWell">
               <h4 class="mid1">What Went Well</h4>
               <p>
                 We had great teamwork, I can't mention that enough, we had great
@@ -170,7 +178,7 @@
           <br />
 
           <div class="column">
-            <div class="whatChange">
+            <div class="whatChange" id="whatChange">
               <h4 class="mid2">What We Would Change</h4>
               <p>
                 With the knowledge we have now I believe we would be more
@@ -186,14 +194,14 @@
       <br />
 
       <div class="extra2">
-        <div class="aboutUs">
+        <div class="aboutUs" id="aboutUs">
           <h3>About Us</h3>
           <div class="row">
 
   <div class="column">
      <div class="rc">
               <h4>
-                <a class="linkR" href="https://www.linkedin.com/in/rahat-chowdhury-5b599519b/">
+                <a class="linkR" href="https://www.linkedin.com/in/rahat-chowdhury-5b599519b/" target="_blank">
                 Rahat Chowdhury</a></h4>
               <p>
                 Rahat was very keen on the project and is very vocal on his
@@ -209,7 +217,7 @@
  <div class="column">
     <div class="sk">
       <h4>
-        <a href="https://www.linkedin.com/in/sharlotte-koren-439b43227/">
+        <a href="https://www.linkedin.com/in/sharlotte-koren-439b43227/" target="_blank">
         Shahar Koren</a></h4>
             <p>
               Shahar was a key player in our team, managing the error handling
@@ -226,7 +234,7 @@
 <div class="column">
   <div class="mv">
           <h4>
-            <a href="https://www.linkedin.com/in/liudmila-vetrenko/">
+            <a href="https://www.linkedin.com/in/liudmila-vetrenko/" target="_blank">
             Mila Vetrenko </a></h4>
           <p>
             Mila worked hard on the ASCII art for our game and also took on the
@@ -242,7 +250,7 @@
           <div class="column">
             <div class="ab">
           <h4>
-            <a href="https://www.linkedin.com/in/alexander-brennan-90b587267/">
+            <a href="https://www.linkedin.com/in/alexander-brennan-90b587267/" target="_blank">
             Alexander Brennan</a></h4>
           <p>
             Alex wrote the narritive and story beats of the game along with
@@ -256,7 +264,7 @@
 </div>
 </div>
 
-        <div class="review">
+        <div class="review" id="review">
           <h4 class="feedback">Reviews</h4>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -276,23 +284,53 @@
               </div>
               <br>
               <br>
-        <a href="#top">Go to Top</a>
-           
+              <div class="credit" id="credits">
+                <h4 class="credits">Credits </h4>
+                <ul class="cred">
+                  <li>Rare: Sea of Thieves</li>
+                  <br>
+                    <li>Wallpaperaccess.com,</li>
+                    <br>
+                    <li>JimJamAlex</li>
+                    <br>
+                    <li> Music by <a href="https://pixabay.com/users/gioelefazzeri-16466931/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=22081%22%3EGioele "> Fazzeri </a></li>
+                    <br>
+                     
+                </ul>
+              </div>
             <br>
-            <br>
-            <p>Credits</p>
+            
+        <a class="gotop" href="#top">Go to Top</a>
+        <br>
+        <br>
+        <br>
+        <img class="last" src="2.jpg" alt="" width="1500px">
+         <br>
+          </div>
         </div>
     </div>
-
-
-
-
-
-
-
       </div>
         </div>
       </div>
     </div>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+        
+        function toggleMute() {
+            if (audio.paused) {
+            audio.play();
+            document.getElementsByTagName("button")[1].innerHTML = "Stop";
+            }
+            else {
+            audio.pause();
+            document.getElementsByTagName("button")[1].innerHTML = "Play";
+            }
+        }
+    </script>
+
+
+
+
   </body>
 </html>
