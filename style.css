@@ -1,7 +1,8 @@
 .container {
   background-image: url("logo.png");
-  background-size: cover;
+  background-size: 100% 130%;
   height: 500px;
+  
 }
 
 .page {
@@ -83,8 +84,8 @@ h1 {
 .column {
   float: left;
   width: 25%;
-  padding: 10px;
-  display: flex;
+  padding:55px;
+  display:flexbox;
   flex-basis: 50%;
 }
 
@@ -126,7 +127,8 @@ h1 {
 }
 .game {
   font-size: 65px;
-  color: rgb(7, 7, 7);
+  color:#f4e5c2;
+  text-shadow: 3px 3px #000000
 }
 .dev {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -290,4 +292,12 @@ img .last {
 }
 .gotop {
   margin-top: 25px;
+}
+
+.column2 {
+  float:left;
+  width:25%;
+  padding:55px;
+  display:flex;
+  flex-basis:50%;
 }
